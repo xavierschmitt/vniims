@@ -75,11 +75,12 @@ All Resources
 </td>
 <td align="center" value="organization">
 <img onclick="selectRadio('organization');" width="100" src="/static/img/organization.png"><br>
-Organizations
+Participating <br />
+Institutes
 </td>
-<td align="center" value="datacollection">
-<img onclick="selectRadio('datacollection');" width="100" src="/static/img/datacollection.png"><br>
-Data Collections
+<td align="center" value="database">
+<img onclick="selectRadio('database');" width="100" src="/static/img/datacollection.png"><br>
+Databases
 </td>
 <td align="center" value="dataset">
 <img onclick="selectRadio('dataset');" width="100" src="/static/img/dataset.png"><br>
@@ -87,15 +88,16 @@ Datasets
 </td>
 <td align="center" value="service">
 <img onclick="selectRadio('service');" width="100" src="/static/img/service.png"><br>
-Services
+Data Services
 </td>
 <td align="center" value="informational">
 <img onclick="selectRadio('informational');" width="100" src="/static/img/informational.png"><br>
-Informational Sites
+Data Portals
 </td>
 <td align="center" value="software">
 <img onclick="selectRadio('software');" width="100" src="/static/img/software.jpg"><br>
-Software
+Metrology-related <br />
+Software and Tools
 </td>
 </tr>
 </table>
@@ -119,20 +121,17 @@ Software
 Resource Type:
 <form id="refine_resource_type">
 <input type="radio" name="resource_type" value="all"> All Resources<br/>
-<input type="radio" name="resource_type" value="organization"> Organization<br/>
-<input type="radio" name="resource_type" value="datacollection"> Data Collection<br/>
-<input type="radio" name="resource_type" value="repository"> Repository<br/>
-<input type="radio" name="resource_type" value="projectarchive"> Project Archive<br/>
-<input type="radio" name="resource_type" value="database"> Database<br/>
-<input type="radio" name="resource_type" value="dataset"> Dataset<br/>
-<input type="radio" name="resource_type" value="service"> Service<br/>
-<input type="radio" name="resource_type" value="informational"> Informational Site<br/>
+<input type="radio" name="resource_type" value="organization"> Participating Institutes<br/>
+<input type="radio" name="resource_type" value="database"> Databases<br/>
+<input type="radio" name="resource_type" value="dataset"> Datasets<br/>
+<input type="radio" name="resource_type" value="service"> Data Services<br/>
+<input type="radio" name="resource_type" value="informational"> Data Portals<br/>
 <input type="radio" name="resource_type" value="software"> Software<br/>
 <br/>
 </form>
 {% if search_Form.form_oai_pmh.my_registries %}
 <div id="id_my_registries">
-	Data Providers:
+	Data Providing Institutes:
 		<br/>
 	{% for value, label in search_Form.form_oai_pmh.my_registries.field.choices %}
 		<input type='checkbox' checked_id="id_my_registries_{{ forloop.counter0 }}" name="my_registries" value='{{value}}' onchange='get_results_keyword_refined();'> {{label}} <br/>

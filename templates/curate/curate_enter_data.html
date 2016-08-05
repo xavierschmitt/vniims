@@ -35,7 +35,7 @@
 <h3>
 {% if template_name == 'organization' %}
 <img width="100" src="/static/img/organization.png">
-Add New Organization
+Add New Participating Institute
 {% elif template_name == 'datacollection' %}
 <img width="100" src="/static/img/datacollection.png">
 Add New Data Collection
@@ -56,7 +56,7 @@ Add New Dataset
 Add New Service
 {% elif template_name == 'informational' %}
 <img width="100" src="/static/img/informational.png">
-Add New Informational Site
+Add Data Portal
 {% elif template_name == 'software' %}
 <img width="100" src="/static/img/software.jpg">
 Add New Software
@@ -71,7 +71,7 @@ Add New Software
 <div class="toolbar">
 	<div class="btn-group pull-right">
 		{% if template_name == 'organization' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=organization';"><i class="icon-file"></i> My Organizations </button>
+		<button class="btn" onclick="location.href='/dashboard/resources?template=organization';"><i class="icon-file"></i> My Institutes </button>
 		{% elif template_name == 'datacollection' %}
 		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Data Collections </button>
 		{% elif template_name == 'repository' %}
@@ -83,11 +83,11 @@ Add New Software
 		{% elif template_name == 'dataset' %}
 		<button class="btn" onclick="location.href='/dashboard/resources?template=dataset';"><i class="icon-file"></i> My Datasets </button>
 		{% elif template_name == 'service' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=service';"><i class="icon-file"></i> My Services </button>
+		<button class="btn" onclick="location.href='/dashboard/resources?template=service';"><i class="icon-file"></i> My Data Services </button>
 		{% elif template_name == 'informational' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=informational';"><i class="icon-file"></i> My Informational Sites </button>
+		<button class="btn" onclick="location.href='/dashboard/resources?template=informational';"><i class="icon-file"></i> My Data Portals </button>
 		{% elif template_name == 'software' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=software';"><i class="icon-file"></i> My Software </button>
+		<button class="btn" onclick="location.href='/dashboard/resources?template=software';"><i class="icon-file"></i> My Software and Tools </button>
 		{% endif %}
     	<button class="btn" onclick="location.href='/dashboard/resources';"><i class="icon-hdd"></i> My Resources </button>
 	</div>

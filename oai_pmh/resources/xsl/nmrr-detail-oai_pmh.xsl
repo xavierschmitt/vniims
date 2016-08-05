@@ -17,23 +17,37 @@
 	<xsl:output method="html" indent="yes" encoding="UTF-8" />	
 	
 	<xsl:template match="/">		
+		<xsl:variable name="url">
+                   <xsl:choose>
+                      <xsl:when test="*/homePage/doi">
+                         <xsl:text>http://dx.doi.org/</xsl:text>
+                         <xsl:value-of select="*/homePage/doi"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                         <xsl:value-of
+                              select="//nr:Resource/nr:content/nr:referenceURL|
+                                      */homeURL|*/homePage/url" />
+                      </xsl:otherwise>
+                   </xsl:choose>
+		</xsl:variable>                              
+
 		<div style="background-color:#fafafa">
 			<table>
 				<tr style="background-color:#f0f0f0">
 					<td style="width:180px" colspan="2">
-						<xsl:variable name="url" select="//nr:Resource/nr:content/nr:referenceURL" />
 						<xsl:choose>
-							<xsl:when test="//nr:Resource/nr:content/nr:referenceURL!=''">
-								<a target="_blank" href="{$url}"><xsl:value-of select="//nr:Resource/nr:identity/nr:title"/></a>	
+							<xsl:when test="$url!=''">
+								<a target="_blank" href="{$url}"><xsl:value-of select="//nr:Resource/nr:identity/nr:title|*/title"/></a>	
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="//nr:Resource/nr:identity/nr:title"/>
+								<xsl:value-of select="//nr:Resource/nr:identity/nr:title|*/title"/>
 							</xsl:otherwise>
 						</xsl:choose>
 					</td>
 				</tr>
 				<xsl:apply-templates select="/*" />
 				<xsl:apply-templates select="//*[not(*)]" />
+				{% if oai_pmh %}
 				<tr style="background-color:#f0f0f0">
 					<td style="width:180px" colspan="2">
 						{% if template_name %}
@@ -41,16 +55,15 @@
 							<strong>{{template_name}}</strong>
 						</span>
 						{% endif %}
-						{% if oai_pmh %}
 						<span class="alert alert-info" style="float: left;padding:0.3em 0.5em 0em 0.5em;margin: 0em 0.5em 0em 0em;height: 1.8em;">
 							<strong>OAI-PMH</strong>
 						</span>
 						<span class="alert alert-success" style="float: left;padding:0.3em 0.5em 0em 0.5em;margin: 0em 0.5em 0em 0em;height: 1.8em;">
 							<text>{{registry_name}}</text>
 						</span>
-						{% endif %}
 					</td>
 				</tr>
+				{% endif %}
 			</table>
 		</div>
 	</xsl:template>
