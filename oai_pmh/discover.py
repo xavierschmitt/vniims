@@ -128,18 +128,20 @@ def load_sets():
 def load_xslt():
     # Add OAI Xslt
     xsltFullName = 'full-oai_pmh'
-    xsltFullPath = 'nmrr-full-oai_pmh.xsl'
+#    xsltFullPath = 'nmrr-full-oai_pmh.xsl'
+    xsltFullPath = 'nmrr-record-preview.xsl'
     xsltDetailName = 'detail-oai_pmh'
-    sltDetailPath = 'nmrr-detail-oai_pmh.xsl'
+#    sltDetailPath = 'nmrr-detail-oai_pmh.xsl'
+    sltDetailPath = 'nmrr-record-page.xsl'
 
-    objFull = ResultXslt.objects(filename='nmrr-full-oai_pmh.xsl')
+    objFull = ResultXslt.objects(filename=xsltFullPath)
     if not objFull:
         file = open(os.path.join(SITE_ROOT, 'oai_pmh', 'resources', 'xsl', xsltFullPath),'r')
         fileContent = file.read()
         objFull = ResultXslt(name=xsltFullName, filename=xsltFullPath, content=fileContent).save()
         Template.objects().update(set__ResultXsltList=str(objFull.id), upsert=True)
 
-    objDetail = ResultXslt.objects(filename='nmrr-detail-oai_pmh.xsl')
+    objDetail = ResultXslt.objects(filename=sltDetailPath)
     if not objDetail:
         file = open(os.path.join(SITE_ROOT, 'oai_pmh', 'resources', 'xsl', sltDetailPath),'r')
         fileContent = file.read()
