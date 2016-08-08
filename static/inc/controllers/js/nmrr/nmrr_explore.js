@@ -153,8 +153,13 @@ filter_result_display = function(filter){
 		$(".nmrr_line.line_creator").show();
 		$(".nmrr_line.line_resourceType").show();
 		$(".nmrr_line.line_subject").show();
+
+            $(".nmrrec_full").hide();
+            $(".nmrrec_brief").show();
 	}else if (filter == 'detailed'){
 		$(".nmrr_line").show();
+            $(".nmrrec_brief").hide();
+            $(".nmrrec_full").show();
 	}else if (filter == 'custom'){
 		$("#config_custom").css('display','');
 		if (custom_view_done == true){
