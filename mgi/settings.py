@@ -22,7 +22,7 @@
 import os
 from mongoengine import connect
 
-VERSION = "BETA"
+VERSION = "DELTA"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -73,7 +73,7 @@ USE_EMAIL = False #Send email, True or False
 SERVER_EMAIL = 'noreply@nmrr.org'
 ADMINS = [('admin', 'admin@nmrr.org')]
 MANAGERS = [('manager', 'moderator@nmrr.org'),]
-EMAIL_SUBJECT_PREFIX = "[NMRR] "
+EMAIL_SUBJECT_PREFIX = "[IMRR] "
 
 #EMAIL_HOST = ""
 #EMAIL_HOST_USER = ""
@@ -145,14 +145,14 @@ HANDLE_SERVER_USER = ''
 HANDLE_SERVER_PSWD = ''
 
 # Customization: Registry
-CUSTOM_TITLE = 'Materials Resource Registry'
-CUSTOM_ORGANIZATION = 'NIST'
-CUSTOM_NAME = 'NMRR'
-CUSTOM_SUBTITLE = 'Part of the Materials Genome Initiative'
-CUSTOM_DATA = 'Materials Data'
+CUSTOM_TITLE = 'International Metrology Resource Registry'
+CUSTOM_ORGANIZATION = 'VNIIMS'
+CUSTOM_NAME = 'IMRR'
+CUSTOM_SUBTITLE = 'A Collaborative Effort of the International Metrology Community'
+CUSTOM_DATA = 'Metrology Resources'
 CUSTOM_CURATE = 'Add your resource'
 CUSTOM_EXPLORE = 'Search for resources'
-CUSTOM_URL = 'http://www.nist.gov'
+CUSTOM_URL = 'http://www.vniims.ru'
 
 # OAI_PMH parameters
 OAI_ADMINS = (

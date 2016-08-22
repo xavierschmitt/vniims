@@ -22,7 +22,7 @@
 
 import os
 
-VERSION = "BETA"
+VERSION = "DELTA"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

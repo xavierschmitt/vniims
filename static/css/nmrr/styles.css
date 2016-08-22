@@ -88,7 +88,7 @@ table caption {
   text-align: left;
 }
 
-a.button { background:#8CB2CA;
+a.button { background:#6CB8EA;
 color: #FFF;
 display: inline-block;
 
@@ -292,7 +292,7 @@ header {
 	padding: 0;
 	margin: 0 auto;
 	text-align: left;
-	background-color: #8CB2CA;
+	background-color: #FFFFFF;
 }
 
 
@@ -305,7 +305,7 @@ header h1 {
 header h1 a {
     color: #F5F8FA;
     padding: 20px 25px;
-	background-color: #699BBA;
+	background-color: #FFFFFF;
    font-size: 0.8em;
     border-bottom: none;
     text-transform: uppercase;
@@ -316,7 +316,7 @@ header h1 a {
  header h1 a:hover { color: #fff }
 
 nav#main {
-	float: right;
+	float: left;
 	margin-top: 0px;
 }
 
@@ -330,6 +330,8 @@ nav ul {
 nav ul ul { 
 	margin: 0;
 	padding: 0;
+	border-top:2px solid #829EBA;
+    border-bottom:2px solid #829EBA;
 }
 
 nav ul li {
@@ -347,8 +349,8 @@ nav ul li a {
 	display: block;
 	float: left;
 	padding: 2px 5px;
-    color: #fff;
-	border-bottom: 3px solid #8CB2CA;
+    color: #007CC3;
+	border-bottom: 3px solid #6CB8EA;
     font-size: 1.0em;
 	margin: 0 20px;
      border-bottom: none;
@@ -363,29 +365,40 @@ nav ul li li a {
 }
 
 nav ul li a:hover {
-	color: #fff;
+	color: #007CC3;
 	text-decoration: none;
 }
 
 nav ul li.selected a, nav ul li.selected a:hover {
-	color: #fff;
-	border-bottom: 3px solid #699BBA;
+	color: #6CB8EA;
+	border-bottom: 3px solid #007CC3;
 	font-weight: bold;
 }
 
+nav ul li.selected ul li a {
+       border-bottom: none;
+}
 
 nav ul li a:hover, nav ul li.sfHover a {
-	color: #fff;
+	color: #007CC3;
 }
 
 
 nav ul li a.sf-with-ul:hover, nav ul li.sfHover a {
-	color: #fff;
+	color: #007CC3;
 }
 
+nav ul li.sfHover ul {
+    background:#FFFFFF;
+}
 
- nav ul li.sfHover ul a, nav ul ul {
-	background: #699BBA;
+nav ul li.sfHover ul li:hover {
+    background:#699BBA;
+}
+
+nav ul ul {
+    border-left:2px solid #829EBA;
+    border-right:2px solid #829EBA;
 }
 
 nav ul li.sf-with-ul.selected ul li a, nav ul li.selected.sfHover li a,  nav ul li.sfHover a a, nav ul li.selected li a  {
@@ -396,6 +409,7 @@ nav ul li li a:hover, nav ul li.sfHover li a:hover {
 	color: #fff;
 	background-color: #699BBA;
 	text-decoration: underline;
+	border: none;
 }
 
 /*** ESSENTIAL STYLES ***/
@@ -456,7 +470,7 @@ div#intro {
 }
 
 div#intro .intro-content {
-	padding: 65px 40px;
+	padding: 20px 40px;
 	text-align: center;
 }
 
@@ -673,7 +687,7 @@ article .article-info a {
 
 .sidebar ul.blocklist li a.selected {
 	background:#699BBA;
-    color: #FFFFFF;
+    color: #829EBA;
 	font-weight: bold;
 
 }

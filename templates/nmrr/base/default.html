@@ -31,13 +31,16 @@
     {% if not is_popup %}
         <header>
 		<div class="width">
-		<h1>
-			<a href="{{CUSTOM_URL}}"><img src="{% static 'img/NIST_logo.svg' %}" width="150"></a>
+		<h1  style="float: left">
+			<a href="{{CUSTOM_URL}}"><img src="{% static 'img/VNIIMS_logo.svg' %}" width="180"></a>
 		</h1>
-		<nav id="main">
+		<nav id="main" style="float: left;">
 			<!--<ul class="sf-menu dropdown sf-js-enabled sf-shadow">-->
 			{% block menu %}{% endblock %}
 		</nav>
+		<h1 style="float: right">
+			<a href="{{CUSTOM_URL}}"><img src="{% static 'img/IMRR_logo.png' %}" width="180"></a>
+		</h1>
 		</div>
 
 		<div class="clear"></div>
