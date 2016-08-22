@@ -370,7 +370,7 @@ nav ul li a:hover {
 }
 
 nav ul li.selected a, nav ul li.selected a:hover {
-	color: #6CB8EA;
+	color: #007CC3;
 	border-bottom: 3px solid #007CC3;
 	font-weight: bold;
 }
@@ -687,7 +687,7 @@ article .article-info a {
 
 .sidebar ul.blocklist li a.selected {
 	background:#699BBA;
-    color: #829EBA;
+    color: #FFFFFF;
 	font-weight: bold;
 
 }
