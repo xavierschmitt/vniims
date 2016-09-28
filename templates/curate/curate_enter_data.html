@@ -32,6 +32,28 @@
 {% endblock %}
 
 {% block title %}
+	<div class="btn-group pull-right">
+		{% if template_name == 'organization' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=organization';"><i class="icon-file"></i> My Institutes </button>
+		{% elif template_name == 'datacollection' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Data Collections </button>
+		{% elif template_name == 'repository' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Repositories </button>
+		{% elif template_name == 'projectarchive' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Project Archives </button>
+		{% elif template_name == 'database' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Databases </button>
+		{% elif template_name == 'dataset' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=dataset';"><i class="icon-file"></i> My Datasets </button>
+		{% elif template_name == 'service' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=service';"><i class="icon-file"></i> My Data Services </button>
+		{% elif template_name == 'informational' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=informational';"><i class="icon-file"></i> My Data Portals </button>
+		{% elif template_name == 'software' %}
+		<button class="btn" onclick="location.href='/dashboard/resources?template=software';"><i class="icon-file"></i> My Software and Tools </button>
+		{% endif %}
+    	<button class="btn" onclick="location.href='/dashboard/resources';"><i class="icon-hdd"></i> My Resources </button>
+	</div>
 <h3>
 {% if template_name == 'organization' %}
 <img width="100" src="/static/img/organization.png">
@@ -64,34 +86,17 @@ Add New Software
 
 
 </h3>
+Tips:
+<ul style="list-style-type: disc;">
+  <li style="padding-bottom: 0px;"> "Grey-ed out" labels indicate optional fields; click the plus (+) icon next to it to add a value </li>
+  <li style="padding-bottom: 0px;"> Some fields can take add multiple values, click the plus (+) icon to show additiona entry boxes </li>
+  <li style="padding-bottom: 0px;"> To remove values or empty items (that are not required), click the minus (-) icon
+</ul>
 {% endblock %}
 
 
 {% block content %}
 <div class="toolbar">
-	<div class="btn-group pull-right">
-		{% if template_name == 'organization' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=organization';"><i class="icon-file"></i> My Institutes </button>
-		{% elif template_name == 'datacollection' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Data Collections </button>
-		{% elif template_name == 'repository' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Repositories </button>
-		{% elif template_name == 'projectarchive' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Project Archives </button>
-		{% elif template_name == 'database' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=datacollection';"><i class="icon-file"></i> My Databases </button>
-		{% elif template_name == 'dataset' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=dataset';"><i class="icon-file"></i> My Datasets </button>
-		{% elif template_name == 'service' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=service';"><i class="icon-file"></i> My Data Services </button>
-		{% elif template_name == 'informational' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=informational';"><i class="icon-file"></i> My Data Portals </button>
-		{% elif template_name == 'software' %}
-		<button class="btn" onclick="location.href='/dashboard/resources?template=software';"><i class="icon-file"></i> My Software and Tools </button>
-		{% endif %}
-    	<button class="btn" onclick="location.href='/dashboard/resources';"><i class="icon-hdd"></i> My Resources </button>
-	</div>
-<br/><br/>
 <div id="xsdForm">
 Please wait while the form is loading...
 <br/><br/>
