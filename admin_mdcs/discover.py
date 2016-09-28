@@ -83,6 +83,7 @@ def load_templates():
             'projectarchive': 'ProjectArchive.xsd',
             'database': 'Database.xsd',
             'dataset': 'Dataset.xsd',
+            'document': 'Document.xsd',
             'service': 'Service.xsd',
             'informational': 'Informational.xsd',
             'software': 'Software.xsd',

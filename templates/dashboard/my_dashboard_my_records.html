@@ -57,6 +57,13 @@
                 </div>
                 <h3>My Datasets</h3>
             {% endif%}
+            {% if template == "document" %}
+                <div class="btn-group pull-right">
+                    <button class="btn clear-fields" onclick="location.href='/dashboard'"><i class="icon-file"></i> My Dashboard</button>
+                    <button class="btn clear-fields" onclick="location.href='/curate/start_curate?template=document'"><i class="icon-file"></i> Add New Document</button>
+                </div>
+                <h3>My Datasets</h3>
+            {% endif%}
             {% if template == "service" %}
                 <div class="btn-group pull-right">
                     <button class="btn clear-fields" onclick="location.href='/dashboard'"><i class="icon-file"></i> My Dashboard</button>

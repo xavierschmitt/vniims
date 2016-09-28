@@ -118,19 +118,19 @@
    </xsl:template>
 
    <xsl:template match="measures" mode="brief">
-      <xsl:if test="propertyClass">
-         <tr><td><em>Property class: </em></td>
+      <xsl:if test="propertyType">
+         <tr><td><em>Property type: </em></td>
              <td>
                <xsl:call-template name="comma-delimit">
-                  <xsl:with-param name="elname">propertyClass</xsl:with-param>
+                  <xsl:with-param name="elname">propertyType</xsl:with-param>
                </xsl:call-template>
              </td></tr>
       </xsl:if>
-      <xsl:if test="substance">
+      <xsl:if test="chemicalConstituent">
          <tr><td><em>Relevant substances: </em></td>
              <td>
                <xsl:call-template name="comma-delimit">
-                  <xsl:with-param name="elname">substance</xsl:with-param>
+                  <xsl:with-param name="elname">chemicalConstituent</xsl:with-param>
                </xsl:call-template>
              </td></tr>
       </xsl:if>
