@@ -62,7 +62,7 @@
                     <button class="btn clear-fields" onclick="location.href='/dashboard'"><i class="icon-file"></i> My Dashboard</button>
                     <button class="btn clear-fields" onclick="location.href='/curate/start_curate?template=document'"><i class="icon-file"></i> Add New Document</button>
                 </div>
-                <h3>My Datasets</h3>
+                <h3>My Documents</h3>
             {% endif%}
             {% if template == "service" %}
                 <div class="btn-group pull-right">
@@ -113,6 +113,13 @@
                     <a href="/dashboard/resources?template=dataset{% if ispublished == True %}&ispublished=true{% elif ispublished == False %}&ispublished=false{% endif%}">
                     <div align="center"><img width="100" src="/static/img/dataset.png"><br>
                     Datasets</div>
+                    </a>
+                </td>
+                <td align="center" style={% if template == "document" %}"border-color:#000000;border-size:15px"{% endif%}>
+                    <a href="/dashboard/resources?template=document{% if ispublished == True %}&ispublished=true{% elif ispublished == False %}&ispublished=false{% endif%}">
+                    <div align="center">    <img width="80" src="/static/img/document.png"
+                                                            title="A standard or metrology-related document."><br>
+                    Standards <br> Documents</div>
                     </a>
                 </td>
                 <td align="center" style={% if template == "service" %}"border-color:#000000;border-size:15px"{% endif%}>
